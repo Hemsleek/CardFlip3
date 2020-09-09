@@ -11,7 +11,116 @@
 
 <body>
 
+    <main class="main">
+        <div class="card">
+            <div class="card-inner">
+                <div id="card1" class="card-front">
+                    <div class="container">
+                        <div class="text-container">
+
+                            <div class="text">
+                                <span class="name">JOHN WICK</span>
+                                <span class="nickname">BABA YAGA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <img src="media/john-wick2.jpeg" alt="john-wick">
+                    <div class="details">
+                        <h2>DATA</h2>
+                        <span><strong>NAME :</strong> JOHN WICK</span>
+                        <span><strong>NICKNAME:</strong> BABA YAGA/BOOGEY MAN</span>
+                        <span><strong>SKILLS :</strong> SHOOTING ,KILLING ,HEADSHOT🔥</span>
+                        <span><strong>WEAKNESS:</strong>  KUNGFU</span>
+                        <span><strong>LIKES :</strong> WIFE , DOG</span>
+                        <span><strong>DISLIKE :</strong> KILLING HIS DOG</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div id="card2" class="card-front">
+                    <div class="container">
+                        <div class="text-container">
+
+                            <div class="text">
+                                <span class="name">JASON STATHAM</span>
+                                <span class="nickname">SHAW</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <img src="media/jason2.jpeg" alt="jason -statham">
+                    <div class="details">
+                        <h2>DATA</h2>
+                        <span><strong>NAME :</strong> JASON STATHAM</span>
+                        <span><strong>NICKNAME:</strong> SHAW</span>
+                        <span><strong>SKILLS :</strong> SHOOTING ,KNIFING,COMBAT</span>
+                        <span><strong>WEAKNESS:</strong>  NAN</span>
+                        <span><strong>LIKES :</strong> DRIFTING</span>
+                        <span><strong>DISLIKE :</strong> HOBBS😅</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card ">
+            <div class="card-inner ">
+                <div id="card3" class="card-front">
+                    <div class="container">
+                        <div class="text-container">
+
+                            <div class="text">
+                                <span class="name">AGENT 47</span>
+                                <span class="nickname">HITMAN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back ">
+                    <img src="media/hitman2.jpg" alt="hitman">
+                    <div class="details">
+                        <h2>DATA</h2>
+                        <span><strong>NAME :</strong> AGENT 47</span>
+                        <span><strong>NICKNAME:</strong> HITMAN</span>
+                        <span><strong>SKILLS :</strong> SHOOTING ,KILLING ,HEADSHOT</span>
+                        <span><strong>WEAKNESS:</strong>  NAN</span>
+                        <span><strong>LIKES :</strong> ASSASINATION</span>
+                        <span><strong>DISLIKE :</strong> PLAYING ⚔️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <script>
+        $(document).ready(function() {
+            $(".card").hover(function() {
+                    $(this).addClass("active");
+                },
+                function() {
+                    $(this).removeClass("active");
+                    $(this).children(".text").css({
+                        "transition-duration": ".5s",
+                        "transition-property": "margin"
+                    })
+                }
+            )
+            $(".card").click(function() {
+                if ($(this).hasClass("clicked")) {
+                    $(".card").removeClass("clicked");
+                    $(this).toggleClass("clicked");
+                } else {
+                    $(".card").removeClass("clicked");
+                }
+                $(this).toggleClass("clicked");
+            })
+        })
     </script>
 </body>
 
